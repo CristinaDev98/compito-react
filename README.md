@@ -5,6 +5,9 @@
 Lo scopo della prova è attestare delle conoscenze minime del framework React
 con una serie di esercizi guidati.
 
+Per installare le librerie necessarie:
+### `npm install`
+
 Per far partire il progetto:
 
 ### `npm start`
@@ -25,10 +28,8 @@ commit con messaggio Es_1
 
 Aggiungere sopra la griglia creata una ulteriore griglia di due righe per 3 colonne.
 La prima riga conterrà le seguenti diciture.
-______________________________________________________
-|                |                 |                 |
+
 |      Male      |     Female      |       N/A       |
-|________________|_________________|_________________|
 
 La seconda riga conterrà, per ogni colonna, l'esatto numero di personaggi con gender "male", "female", "n/a".
 
