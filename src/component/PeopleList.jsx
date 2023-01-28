@@ -1,9 +1,24 @@
 import React from "react";
 import people from "../data/People";
-console.log(people);
+// console.log(people);
+
 const PeopleList = () => {
   return (
-    <table className="table-people">
+    <table>
+      <thead>
+        <tr>
+          <th className="countMale">Male</th>
+          <th className="countFemale">Female</th>
+          <th className="countNa">N/A</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td className="genderMale"></td>
+          <td className="genderFemale"></td>
+          <td className="genderNa"></td>
+        </tr>
+      </tbody>
       <thead>
         <tr>
           <th>Name</th>
@@ -15,7 +30,6 @@ const PeopleList = () => {
       <tbody>
         <tr>
           <td>{people[0].name}</td>
-
           <td>{people[0].height}</td>
           <td>{people[0].mass}</td>
           <td>{people[0].gender}</td>
@@ -43,6 +57,96 @@ const PeopleList = () => {
           <td>{people[4].height}</td>
           <td>{people[4].mass}</td>
           <td>{people[4].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[5].name}</td>
+          <td>{people[5].height}</td>
+          <td>{people[5].mass}</td>
+          <td>{people[5].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[6].name}</td>
+          <td>{people[6].height}</td>
+          <td>{people[6].mass}</td>
+          <td>{people[6].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[7].name}</td>
+          <td>{people[7].height}</td>
+          <td>{people[7].mass}</td>
+          <td>{people[7].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[8].name}</td>
+          <td>{people[8].height}</td>
+          <td>{people[8].mass}</td>
+          <td>{people[8].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[9].name}</td>
+          <td>{people[9].height}</td>
+          <td>{people[9].mass}</td>
+          <td>{people[9].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[10].name}</td>
+          <td>{people[10].height}</td>
+          <td>{people[10].mass}</td>
+          <td>{people[10].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[11].name}</td>
+          <td>{people[11].height}</td>
+          <td>{people[11].mass}</td>
+          <td>{people[11].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[12].name}</td>
+          <td>{people[12].height}</td>
+          <td>{people[12].mass}</td>
+          <td>{people[12].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[13].name}</td>
+          <td>{people[13].height}</td>
+          <td>{people[13].mass}</td>
+          <td>{people[13].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[14].name}</td>
+          <td>{people[14].height}</td>
+          <td>{people[14].mass}</td>
+          <td>{people[14].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[15].name}</td>
+          <td>{people[15].height}</td>
+          <td>{people[15].mass}</td>
+          <td>{people[15].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[16].name}</td>
+          <td>{people[16].height}</td>
+          <td>{people[16].mass}</td>
+          <td>{people[16].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[17].name}</td>
+          <td>{people[17].height}</td>
+          <td>{people[17].mass}</td>
+          <td>{people[17].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[18].name}</td>
+          <td>{people[18].height}</td>
+          <td>{people[18].mass}</td>
+          <td>{people[18].gender}</td>
+        </tr>
+        <tr>
+          <td>{people[19].name}</td>
+          <td>{people[19].height}</td>
+          <td>{people[19].mass}</td>
+          <td>{people[19].gender}</td>
         </tr>
       </tbody>
     </table>
