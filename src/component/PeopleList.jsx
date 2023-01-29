@@ -1,22 +1,59 @@
-import React from "react";
+import { React, useState } from "react";
 import people from "../data/People";
 // console.log(people);
 
+// let genderMale = document.getElementsByClassName("genderMale");
+// let genderFemale = document.getElementsByClassName("genderFemale");
+// let count = document.createTextNode(1);
+
 const PeopleList = () => {
+  let genderMale = 0;
+  let genderFemale = 0;
+  let genderNa = 0;
+
+  const [contatoreMale, setContatoreMale] = useState(0);
+  const [contatoreFemale, setContatoreFemale] = useState(0);
+  const [contatoreNa, setContatoreNa] = useState(0);
+
+  for (let i = 0; i < people.length; i++) {
+    if (people[i].gender === "male") {
+      genderMale++;
+    } else if (people[i].gender === "female") {
+      genderFemale++;
+    } else {
+      genderNa++;
+    }
+  }
+
+  function handleButton(i) {
+    if (people[i].gender === "male") {
+      setContatoreMale(contatoreMale + 1);
+    } else if (people[i].gender === "female") {
+      setContatoreFemale(contatoreFemale + 1);
+    } else {
+      setContatoreNa(contatoreNa + 1);
+    }
+  }
+
   return (
     <table>
       <thead>
         <tr>
-          <th className="countMale">Male</th>
-          <th className="countFemale">Female</th>
-          <th className="countNa">N/A</th>
+          <th>Male</th>
+          <th>Female</th>
+          <th>N/A</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td className="genderMale"></td>
-          <td className="genderFemale"></td>
-          <td className="genderNa"></td>
+          <td className="genderMale">{genderMale}</td>
+          <td className="genderFemale">{genderFemale}</td>
+          <td className="genderNa">{genderNa}</td>
+        </tr>
+        <tr>
+          <td className="genderMale">{contatoreMale}</td>
+          <td className="genderFemale">{contatoreFemale}</td>
+          <td className="genderNa">{contatoreNa}</td>
         </tr>
       </tbody>
       <thead>
@@ -28,126 +65,24 @@ const PeopleList = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{people[0].name}</td>
-          <td>{people[0].height}</td>
-          <td>{people[0].mass}</td>
-          <td>{people[0].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[1].name}</td>
-          <td>{people[1].height}</td>
-          <td>{people[1].mass}</td>
-          <td>{people[1].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[2].name}</td>
-          <td>{people[2].height}</td>
-          <td>{people[2].mass}</td>
-          <td>{people[2].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[3].name}</td>
-          <td>{people[3].height}</td>
-          <td>{people[3].mass}</td>
-          <td>{people[3].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[4].name}</td>
-          <td>{people[4].height}</td>
-          <td>{people[4].mass}</td>
-          <td>{people[4].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[5].name}</td>
-          <td>{people[5].height}</td>
-          <td>{people[5].mass}</td>
-          <td>{people[5].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[6].name}</td>
-          <td>{people[6].height}</td>
-          <td>{people[6].mass}</td>
-          <td>{people[6].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[7].name}</td>
-          <td>{people[7].height}</td>
-          <td>{people[7].mass}</td>
-          <td>{people[7].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[8].name}</td>
-          <td>{people[8].height}</td>
-          <td>{people[8].mass}</td>
-          <td>{people[8].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[9].name}</td>
-          <td>{people[9].height}</td>
-          <td>{people[9].mass}</td>
-          <td>{people[9].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[10].name}</td>
-          <td>{people[10].height}</td>
-          <td>{people[10].mass}</td>
-          <td>{people[10].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[11].name}</td>
-          <td>{people[11].height}</td>
-          <td>{people[11].mass}</td>
-          <td>{people[11].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[12].name}</td>
-          <td>{people[12].height}</td>
-          <td>{people[12].mass}</td>
-          <td>{people[12].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[13].name}</td>
-          <td>{people[13].height}</td>
-          <td>{people[13].mass}</td>
-          <td>{people[13].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[14].name}</td>
-          <td>{people[14].height}</td>
-          <td>{people[14].mass}</td>
-          <td>{people[14].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[15].name}</td>
-          <td>{people[15].height}</td>
-          <td>{people[15].mass}</td>
-          <td>{people[15].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[16].name}</td>
-          <td>{people[16].height}</td>
-          <td>{people[16].mass}</td>
-          <td>{people[16].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[17].name}</td>
-          <td>{people[17].height}</td>
-          <td>{people[17].mass}</td>
-          <td>{people[17].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[18].name}</td>
-          <td>{people[18].height}</td>
-          <td>{people[18].mass}</td>
-          <td>{people[18].gender}</td>
-        </tr>
-        <tr>
-          <td>{people[19].name}</td>
-          <td>{people[19].height}</td>
-          <td>{people[19].mass}</td>
-          <td>{people[19].gender}</td>
-        </tr>
+        {people.map((x, i) => (
+          <tr key={i}>
+            <td>{x.name}</td>
+            <td>{x.height}</td>
+            <td>{x.mass}</td>
+            <td>{x.gender}</td>
+            <td>
+              <button
+                id={"button_" + i}
+                onClick={() => {
+                  handleButton(i);
+                }}
+              >
+                CLICK ME
+              </button>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );

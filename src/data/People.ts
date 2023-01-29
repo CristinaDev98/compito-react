@@ -506,4 +506,4 @@ const people: Person[] = [
     }
 ]
 
-export default people
+export default people;
