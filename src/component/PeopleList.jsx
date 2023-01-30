@@ -1,16 +1,14 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import people from "../data/People";
 // console.log(people);
-
-// let genderMale = document.getElementsByClassName("genderMale");
-// let genderFemale = document.getElementsByClassName("genderFemale");
-// let count = document.createTextNode(1);
 
 const PeopleList = () => {
   let genderMale = 0;
   let genderFemale = 0;
   let genderNa = 0;
 
+  const [wasEven, setWasEven] = useState(true);
+  const [wasOdd, setWasOdd] = useState(false);
   const [contatoreMale, setContatoreMale] = useState(0);
   const [contatoreFemale, setContatoreFemale] = useState(0);
   const [contatoreNa, setContatoreNa] = useState(0);
@@ -34,6 +32,18 @@ const PeopleList = () => {
       setContatoreNa(contatoreNa + 1);
     }
   }
+
+  useEffect(() => {
+    if (contatoreFemale % 2 === 0 && wasOdd) {
+      setContatoreMale(contatoreMale + 1);
+      setWasOdd(false);
+      setWasEven(true);
+    } else if (contatoreFemale % 2 !== 0 && wasEven) {
+      setContatoreNa(contatoreNa * 2);
+      setWasOdd(true);
+      setWasEven(false);
+    }
+  }, [contatoreFemale, contatoreMale, contatoreNa]);
 
   return (
     <table>
